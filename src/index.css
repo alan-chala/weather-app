@@ -128,3 +128,9 @@
     @apply font-sans;
   }
 }
+
+body,
+html {
+  min-height: 100dvh;
+  position: relative;
+}

@@ -25,7 +25,7 @@ export const NavBar = ({ getCurrentWeather }: NavProps) => {
   }
 
   return (
-    <nav className="flex items-center justify-between p-4 min-h-10 bg-slate-100">
+    <nav className="flex items-center justify-between h-22.5 px-6 max-w-5xl mx-auto">
       <div>
         <p>Weather</p>
       </div>
