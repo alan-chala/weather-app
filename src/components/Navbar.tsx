@@ -25,15 +25,15 @@ export const NavBar = ({ getCurrentWeather }: NavProps) => {
   }
 
   return (
-    <nav className="flex items-center justify-between h-22.5 px-6 max-w-5xl mx-auto">
-      <div>
+    <nav className="flex items-center justify-between h-22.5 md:px-6 px-4 max-w-5xl mx-auto">
+      <div className="md:block hidden">
         <p>Weather</p>
       </div>
 
       <form onSubmit={handleSubmit}>
         <ButtonGroup>
           <Input
-            placeholder="Search..."
+            placeholder="Search for a city..."
             name="city"
             id="city"
             value={userCity}

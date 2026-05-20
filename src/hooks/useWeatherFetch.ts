@@ -20,7 +20,7 @@ export const useWeatherFetch = () => {
 
       if (!resp.ok) {
         throw new Error(
-          `Error ${resp.status}: No se pudo obtener el clima de ${city}`,
+          `Error ${resp.status}: We couldn't find the weather information of ${city}`,
         );
       }
 

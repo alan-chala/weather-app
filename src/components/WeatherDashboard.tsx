@@ -1,5 +1,6 @@
 import type { WeatherDashboardProps } from "@/types";
 import { Loader } from "./Loader";
+import { ErrorMessage } from "./ErrorMessage";
 
 export const WeatherDashboard = ({
   data,
@@ -11,7 +12,7 @@ export const WeatherDashboard = ({
   }
 
   if (error.hasErrors) {
-    console.log(error.message);
+    return <ErrorMessage error={error} />;
   }
 
   return (
