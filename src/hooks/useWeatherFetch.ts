@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
+import type { Error } from "@/types";
 
 export const useWeatherFetch = () => {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [error, setError] = useState<{ hasErrors: boolean; message: string }>({
+  const [error, setError] = useState<Error>({
     hasErrors: false,
     message: "",
   });
