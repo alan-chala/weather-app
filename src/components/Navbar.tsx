@@ -4,7 +4,9 @@ import { Button } from "@/components/ui/button";
 import { ButtonGroup } from "@/components/ui/button-group";
 import { Input } from "@/components/ui/input";
 
-export const NavBar = () => {
+import type { NavProps } from "@/types";
+
+export const NavBar = ({ getCurrentWeather }: NavProps) => {
   const [userCity, setUserCity] = useState("");
 
   function handleForm(
@@ -19,7 +21,7 @@ export const NavBar = () => {
 
     if (userCity.trim() === "") return;
 
-    console.log(userCity);
+    getCurrentWeather(userCity);
   }
 
   return (
