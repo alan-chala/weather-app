@@ -15,7 +15,7 @@ export const useWeatherFetch = () => {
 
     try {
       const resp = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=9e0c292d84630d0bfd69e535fa17ae7d`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}`,
       );
 
       if (!resp.ok) {

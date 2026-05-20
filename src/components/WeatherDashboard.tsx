@@ -1,4 +1,5 @@
 import type { WeatherDashboardProps } from "@/types";
+import { Loader } from "./Loader";
 
 export const WeatherDashboard = ({
   data,
@@ -6,7 +7,7 @@ export const WeatherDashboard = ({
   error,
 }: WeatherDashboardProps) => {
   if (isLoading) {
-    console.log("Loading...");
+    return <Loader />;
   }
 
   if (error.hasErrors) {
