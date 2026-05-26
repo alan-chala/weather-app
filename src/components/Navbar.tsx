@@ -22,6 +22,7 @@ export const NavBar = ({ getCurrentWeather }: NavProps) => {
     if (userCity.trim() === "") return;
 
     getCurrentWeather(userCity);
+    setUserCity("")
   }
 
   return (

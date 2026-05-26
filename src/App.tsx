@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <NavBar getCurrentWeather={getCurrentWeather} />
-      <main className="py-10 px-6 max-w-5xl mx-auto min-h-[calc(100dvh-22.5rem)]">
+      <main className="py-10 px-6 max-w-5xl mx-auto min-h-[calc(100dvh-90px)]">
         <WeatherDashboard data={data} isLoading={isLoading} error={error} />
       </main>
     </>

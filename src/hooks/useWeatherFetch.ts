@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import type { Error } from "@/types";
+import type { CurrentWeatherApiResponse, Error } from "@/types";
 
 export const useWeatherFetch = () => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<CurrentWeatherApiResponse | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error>({
     hasErrors: false,
@@ -15,7 +15,7 @@ export const useWeatherFetch = () => {
 
     try {
       const resp = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}&units=metric&lang=es`,
       );
 
       if (!resp.ok) {

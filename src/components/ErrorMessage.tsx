@@ -7,7 +7,7 @@ type ErrorProps = {
 export const ErrorMessage = ({ error }: ErrorProps) => {
   return (
     <>
-      <div className="min-h-[calc(100dvh-22.5rem)] flex flex-col gap-2 items-center justify-center">
+      <div className="flex flex-col gap-2 items-center justify-center">
         <img
           src="/error.svg"
           alt="Error illustration"
