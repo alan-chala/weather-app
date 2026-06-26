@@ -61,8 +61,77 @@ export type Error = {
   message: string;
 };
 
-export type WeatherDashboardProps = {
-  data: CurrentWeatherApiResponse | null;
-  isLoading: boolean;
-  error: Error;
+export type ForecastResponse = {
+  cod: string;
+  message: number;
+  cnt: number;
+  list: ForecastItem[];
+  city: City;
+};
+
+export type ForecastItem = {
+  dt: number;
+  main: MainWeather;
+  weather: Weather[];
+  clouds: Clouds;
+  wind: Wind;
+  visibility: number;
+  pop: number;
+  rain?: Rain;
+  sys: Sys;
+  dt_txt: string;
+};
+
+export type MainWeather = {
+  temp: number;
+  feels_like: number;
+  temp_min: number;
+  temp_max: number;
+  pressure: number;
+  sea_level: number;
+  grnd_level: number;
+  humidity: number;
+  temp_kf: number;
+  dew_point: number;
+};
+
+export type Weather = {
+  id: number;
+  main: string;
+  description: string;
+  icon: string;
+};
+
+export type Clouds = {
+  all: number;
+};
+
+export type Wind = {
+  speed: number;
+  deg: number;
+  gust: number;
+};
+
+export type Rain = {
+  "3h": number;
+};
+
+export type Sys = {
+  pod: "d" | "n";
+};
+
+export type City = {
+  id: number;
+  name: string;
+  coord: Coord;
+  country: string;
+  population: number;
+  timezone: number;
+  sunrise: number;
+  sunset: number;
+};
+
+export type Coord = {
+  lat: number;
+  lon: number;
 };
