@@ -7,7 +7,7 @@ import type {
 
 export const useWeatherFetch = () => {
   const [data, setData] = useState<CurrentWeatherApiResponse | null>(null);
-  const [forecasts, setForecasts] = useState<ForecastResponse | null>();
+  const [forecasts, setForecasts] = useState<ForecastResponse | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error>({
     hasErrors: false,

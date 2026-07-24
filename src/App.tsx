@@ -13,7 +13,7 @@ function App() {
           data={data}
           isLoading={isLoading}
           error={error}
-          forecasts={forecasts}
+          forecasts={forecasts!}
         />
       </main>
     </>
