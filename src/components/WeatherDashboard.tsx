@@ -75,7 +75,7 @@ export const WeatherDashboard = ({
         <div className="col-span-2 flex gap-4">
           <Card className="flex-1">
             <CardContent>
-              <p>Feels Like</p>
+              <p>Sensación térmica</p>
               <img
                 className="object-cover"
                 width={105}
@@ -91,7 +91,7 @@ export const WeatherDashboard = ({
 
           <Card className="flex-1">
             <CardContent>
-              <p>Pressure</p>
+              <p>Presión</p>
               <img
                 className="object-cover"
                 width={105}
@@ -107,7 +107,7 @@ export const WeatherDashboard = ({
 
           <Card className="flex-1">
             <CardContent>
-              <p>Humidity</p>
+              <p>Humedad</p>
               <img
                 className="object-cover"
                 width={105}
