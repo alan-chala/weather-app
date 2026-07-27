@@ -24,7 +24,7 @@ export const useWeatherFetch = () => {
           `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}&units=metric&lang=es`,
         ),
         fetch(
-          `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${import.meta.env.VITE_API_KEY}&cnt=7&units=metric&lang=es`,
+          `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${import.meta.env.VITE_API_KEY}&cnt=7&units=metric&lang=es`,
         ),
       ]);
 
