@@ -5,7 +5,7 @@ export const Loader = () => {
     <>
       <div className="flex flex-col gap-2 items-center justify-center min-h-80">
         <Spinner className="size-10" />
-        <p>Loading city information...</p>
+        <p>Cargando información del clima...</p>
       </div>
     </>
   );

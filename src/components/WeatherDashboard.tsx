@@ -15,6 +15,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { HourlyForecast } from "./HourlyForecast";
+import { ContentCard } from "./ContentCard";
 
 export type WeatherDashboardProps = {
   data: CurrentWeatherApiResponse | null;
@@ -73,53 +74,23 @@ export const WeatherDashboard = ({
         </Card>
 
         <div className="col-span-2 flex gap-4">
-          <Card className="flex-1">
-            <CardContent>
-              <p>Sensación térmica</p>
-              <img
-                className="object-cover"
-                width={105}
-                height={105}
-                src="/feel.svg"
-                alt="Feels like ico"
-              />
-            </CardContent>
-            <CardFooter>
-              <p>{feels}°C</p>
-            </CardFooter>
-          </Card>
+          <ContentCard
+            name="Sensación térmica"
+            imageUrl="/feel.svg"
+            content={`${feels}°C`}
+          />
 
-          <Card className="flex-1">
-            <CardContent>
-              <p>Presión</p>
-              <img
-                className="object-cover"
-                width={105}
-                height={105}
-                src="/pressure.svg"
-                alt="Pressure icon"
-              />
-            </CardContent>
-            <CardFooter>
-              <p>{pressure}hPa</p>
-            </CardFooter>
-          </Card>
+          <ContentCard
+            name="Presión"
+            imageUrl="/pressure.svg"
+            content={`${pressure}hPa`}
+          />
 
-          <Card className="flex-1">
-            <CardContent>
-              <p>Humedad</p>
-              <img
-                className="object-cover"
-                width={105}
-                height={105}
-                src="/humidity.svg"
-                alt="Humidity icon"
-              />
-            </CardContent>
-            <CardFooter>
-              <p>{humidity}%</p>
-            </CardFooter>
-          </Card>
+          <ContentCard
+            name="Humedad"
+            imageUrl="/humidity.svg"
+            content={`${humidity}%`}
+          />
         </div>
       </section>
 
