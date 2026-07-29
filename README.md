@@ -37,8 +37,6 @@ This project reinforced several practical frontend skills:
 
 ## Project Image
 
-Add your project screenshot here:
-
 ![alt text](public/preview.png)
 
 ## Deployed Project
